@@ -1,7 +1,7 @@
 # Bug Report: `tsc` generates incorrect types for arrow functions
 
 `tsc` incorrectly simplifies declaration types for functions written in arrow notation.
-The `tsc` command used to build the source (as used in `package.json`) is as follows:
+The `tsc` command used to build the source is as follows:
 
 ```bash
 tsc src/*.ts --outdir build/ --allowSyntheticDefaultImports --declaration --sourceMap
