@@ -39,3 +39,16 @@ export declare function map2<I, O>(
 ```
 
 As seen above, `map` has an incorrect type signature, while `map2` has the correct type signature.
+
+## Commands to reproduce bug using this repo
+
+```bash
+# install `typescript` dependency
+npm install
+
+# clear the old build
+rm -rf build
+
+# run build
+npm run build
+```
