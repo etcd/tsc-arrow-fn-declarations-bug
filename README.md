@@ -1,4 +1,4 @@
-# Bug Report: `tsc` generates incorrect types for arrow functions
+# Bug repro: `tsc` incorrectly simplifies arrow function types
 
 `tsc` incorrectly simplifies declaration types for functions written in arrow notation.
 The `tsc` command used to build the source is as follows:
@@ -7,7 +7,7 @@ The `tsc` command used to build the source is as follows:
 tsc src/*.ts --outdir build/ --allowSyntheticDefaultImports --declaration --sourceMap
 ```
 
-And the source code that the above was run against, containing equivalent functions aside from notation, is as follows:
+And the source, containing equivalent functions aside from notation, is as follows:
 
 ```typescript
 export const map = <I, O>(i: I | undefined, fn: (_: I) => O): O | undefined => {
